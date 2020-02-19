@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title> 문자 객체 </title>
+	<script>
+		var t = "Hello Thank you good luck to you";
+
+		document.write(t.charAt(16), "<br>"); 				// g (Input : idx, Return : char)
+		document.write(t.indexOf("you"), "<br>"); 			// 12 (Input : str, Return : idx)
+		document.write(t.indexOf("you", 16), "<br>"); 		// 29 (Input : str, start_idx, Return : idx)
+		document.write(t.lastIndexOf("you"), "<br>"); 		// 29 (Input : str, Return : idx)
+		document.write(t.lastIndexOf("you", 25), "<br>"); 	// 12 (Input : str, start_idx, Return : idx)
+		document.write(t.match("luck"), "<br>"); 			// luck (Input : str, Return : str(or null))
+		document.write(t.search("you"), "<br>"); 			// 12 (Input : str, Return : idx)
+		document.write(t.substr(21, 4), "<br>"); 			// luck (Input : start_idx, length, Return : str)
+		document.write(t.substring(6, 12), "<br>"); 		// Thank (Input : start_idx, end_idx, Return : str)
+		document.write(t.replace("you", "me"), "<br>"); 	// Hello Thank 'me' good luck to you (Input : now_str, change_str, Return : str)
+		document.write(t.toLowerCase(), "<br>");			// -> all lower string
+		document.write(t.toUpperCase(), "<br>");			// -> all upper string
+		document.write(t.length, "<br>");					// -> string length
+
+		var s = t.split(" ");
+		document.write(s[0], "<br>");						// Hello
+		document.write(s[4], "<br>");						// luck
+
+		var str = "A";
+		var t = str.charCodeAt(0);							// A (Input : idx, Return : ASCII_code)
+		document.write(t);									// 65
+		document.write(String.fromCharCode(65), "<br>");	// A (Input : ASCII_code, Return : char)
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>
